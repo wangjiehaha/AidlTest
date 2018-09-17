@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AidlTest.iml" filepath="$PROJECT_DIR$/AidlTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/booklibrary/booklibrary.iml" filepath="$PROJECT_DIR$/booklibrary/booklibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookmanagerservice/bookmanagerservice.iml" filepath="$PROJECT_DIR$/bookmanagerservice/bookmanagerservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarymanager/librarymanager.iml" filepath="$PROJECT_DIR$/librarymanager/librarymanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reader/reader.iml" filepath="$PROJECT_DIR$/reader/reader.iml" />
+    </modules>
+  </component>
+</project>
