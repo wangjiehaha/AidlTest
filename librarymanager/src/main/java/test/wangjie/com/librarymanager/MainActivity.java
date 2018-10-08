@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import test.wangjie.com.booklibrary.Book;
 import test.wangjie.com.booklibrary.Manager.BookManager;
+import test.wangjie.com.booklibrary.config.BkSDK;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,13 +20,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /** 注意是要在子线程中，否则会阻塞，绑定不了服务，具体原因还要分析？？？*/
-        new Thread(new Runnable() {
+        BkSDK.getInstans(getApplicationContext()).addListener(new BkSDK.SDKInitListener() {
             @Override
-            public void run() {
-                mBookManager = new BookManager(getApplicationContext());
+            public void onConnectSuccess() {
+                mBookManager = BkSDK.getInstans(getApplicationContext()).getBookManager();
             }
-        }).start();
+        });
         addBookBtn = findViewById(R.id.add_book);
         editText = findViewById(R.id.book_name_edit);
         addBookBtn.setOnClickListener(new View.OnClickListener() {
