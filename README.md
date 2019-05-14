@@ -1,6 +1,6 @@
+#说明
 1.app模块为Settings的源码，所以依赖的jar文件来源于系统编译后获取，settingslib.aar和setupwizardlib.aar
   可以分别通过编译settingslib和setupwizard模块获取
-
 2.编译所需要的 android.jar 需要是打开所有隐藏 api，制作方法为：
 （1）编译系统后，生成out\target\common\obj\JAVA_LIBRARIES\framework_intermediates\classes.jar
 （2）将classes.jar解压，然后把解压后的类文件添加和替换到sdk/platforms/android-25/android.jar
